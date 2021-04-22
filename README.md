@@ -10,7 +10,6 @@
 ### Description
 Party Palace is a party supply and rental business that lets customers order, purchase, or make rentals for their party needs! 
 
-Customers should be able to access all the transcations they've made, search through products and services, and access customer support for any help they may need. Sales personnel should also have access to a portal that allows them to place orders for customers, as well as view their sales metrics
 
 ## Product Spec
 ### 1. User Stories (required and optional)
