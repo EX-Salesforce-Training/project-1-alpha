@@ -2,9 +2,9 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+
 
 ## Overview
 ### Description
@@ -21,20 +21,16 @@ Party Palace is a party supply and rental business that lets customers order, pu
   - [ ] Access Experience Cloud Site and login/register
   - [ ] View past transactions
   - [ ] Create new orders
+
 - [ ] Sales personnel should be able to:
   - [ ] View their sales metrics
   - [ ] Place orders for customers
 
 
-**Optional Features**
-
-* Most popular 
-* Recommended 
-
-
 
 ### 2. Screen Archetypes
 
+* Landing Page
 * Order Page
 * Sales Metrics
 * Searchable Products and Services
@@ -44,11 +40,6 @@ Party Palace is a party supply and rental business that lets customers order, pu
 ### 3. Wireframes
 
 
-
-
-## Models
-
-### User
 
 
 
