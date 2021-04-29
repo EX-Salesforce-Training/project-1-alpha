@@ -1,0 +1,65 @@
+<apex:page controller="StoreProductsController">
+    <apex:stylesheet value="{!$Resource.ProductPageCSS}"/>
+    <apex:slds >
+        <apex:form >
+            <apex:pageBlock >
+                
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Previous"/>
+                    <apex:commandButton value="Next"/>
+                </apex:pageBlockButtons>
+                
+                
+                <apex:dataTable rows="5" value="{!productWrapper}" var="product" styleClass="slds-grid slds-wrap slds-gutters">
+                    
+                    <apex:column >
+                        <br/>
+                        <div class="product" >
+                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <br/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
+                            <br/>
+                            <apex:outputText value="description"></apex:outputText>
+                            <br/>
+                            <apex:commandButton value="Add to Cart"/>
+                        </div>
+                    </apex:column>
+                    
+                    <apex:column >
+                        <br/>
+                        
+                        <div class="product" >
+                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <br/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
+                            <br/>
+                            <apex:outputText value="description"></apex:outputText>
+                            <br/>
+                            <apex:commandButton value="Add to Cart"/>
+                        </div>
+                        
+                    </apex:column>
+                    
+                    <apex:column >
+                        <br/>
+                        
+                        <div class="product">
+                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <br/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
+                            <br/>
+                            <apex:outputText value="description"></apex:outputText>
+                            <br/>
+                            <apex:commandButton value="Add to Cart"/>
+                        </div>
+                        
+                    </apex:column>
+                    
+                    
+                </apex:dataTable>
+                
+                
+            </apex:pageBlock>
+        </apex:form>
+    </apex:slds>
+</apex:page>
