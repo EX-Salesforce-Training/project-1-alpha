@@ -39,8 +39,10 @@ Party Palace is a party supply and rental business that lets customers order, pu
 
 ### 3. Style Guides
 
+[Visualforce Style Guide](https://hackmd.io/y534sApuSV-fADF-eR1KAg)
+<br/>
 [Apex Style Guide](https://hackmd.io/n7ub8lwuQgGjMokkKNw0FQ)
-</br>
+<br/>
 [HTML/CSS Style Guide](https://hackmd.io/YcPiCedRRq65r9zV9Hlixg)
 
 
