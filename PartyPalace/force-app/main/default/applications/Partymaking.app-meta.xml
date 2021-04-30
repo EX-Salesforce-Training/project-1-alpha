@@ -22,5 +22,4 @@
     <tabs>Rental_Period__c</tabs>
     <tabs>Delivery__c</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Transactions_UtilityBar</utilityBar>
 </CustomApplication>
