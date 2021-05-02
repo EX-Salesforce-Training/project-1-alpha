@@ -1,0 +1,18 @@
+<apex:page standardController="Lead">
+  <apex:sectionHeader title="Lead" subtitle="New Lead"/>
+  <apex:form >
+      <apex:pageBlock title="Lead" mode="edit">
+          <apex:pageblockButtons >
+              <apex:commandButton value="Save" action="{!Save}"/>
+              <apex:commandButton value="Cancel" action="{!Cancel}"/>
+          </apex:pageblockButtons>
+          <apex:pageBlockSection title="Lead Info" columns="2">
+              
+              <apex:inputField value="{!Lead.Company}"/>
+              <apex:inputField value="{!Lead.LastName}"/>
+              <apex:inputField value="{!lead.Status}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>
+              
