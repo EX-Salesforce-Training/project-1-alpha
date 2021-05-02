@@ -1,3 +1,9 @@
+<!-- Name: TrendingItems Page
+     Author: Andreology
+     Created: 04/29/2021
+     Updated: 05/02/2021
+     Description: This page will be a items list of trending products 
+-->
 <apex:page >
 <!-- Begin Default Content REMOVE THIS -->
 <h1>Congratulations</h1>

@@ -1,3 +1,9 @@
+<!-- Name: NewLead Page
+     Author: Andreology
+     Created: 04/30/2021
+     Updated: 05/02/2021
+     Description: This page will be a form to receive user input and create web to lead generation
+-->
 <apex:page standardController="Lead">
   <apex:sectionHeader title="Lead" subtitle="New Lead"/>
   <apex:form >
