@@ -1,0 +1,21 @@
+<apex:page controller="TrendingListController"  sidebar="false">
+<apex:pageBlock title="Trending Items">
+    <apex:pageBlockSection title="data" columns="2">
+        <apex:form >
+            <center>
+                <apex:image value="{!IF(pic == '{!$Resource.product}', $Resource.product, $Resource.product0) }" width="50" height="50"/> 
+                
+                <br/>
+                <br/>
+                <br/>
+                    
+                <apex:commandButton action="{!nextButton}" value="Previous"/> &nbsp;&nbsp;&nbsp;
+                <apex:commandButton action="{!nextButton}" value="Next"/>   
+            </center>
+        </apex:form>
+        <p> Product Name: </p>
+        <p> Product Description: </p>
+        <p> Rating: </p>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>
