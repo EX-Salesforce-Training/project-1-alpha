@@ -1,0 +1,13 @@
+.product{
+    background:#F4C558; 
+    text-align:center; 
+    margin-top:5px; 
+    margin-right:15px; 
+    padding:10px; 
+    border-radius:5px;
+}
+
+.productLabel{
+    font-size:1.5em; 
+    font-weight:bold;
+}
