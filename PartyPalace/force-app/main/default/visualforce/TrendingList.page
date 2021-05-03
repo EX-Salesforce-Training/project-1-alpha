@@ -3,7 +3,7 @@
     <apex:pageBlockSection title="data" columns="2">
         <apex:form >
             <center>
-                <apex:image value="{!IF(pic == '{!$Resource.product}', $Resource.product, $Resource.product0) }" width="50" height="50"/> 
+                <apex:image value="{!IF(pic == null, $Resource.product, $Resource.product0) }" width="50" height="50"/> 
                 
                 <br/>
                 <br/>

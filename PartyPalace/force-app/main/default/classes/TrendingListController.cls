@@ -1,10 +1,10 @@
 public  class TrendingListController {
    //get list of top 5 trending products
 
-   public String pic = '{!$Resource.product}';
+   public String pic = null;
    public void TrendingListController() {
-       this.pic = '{!$Resource.product}'; 
-       System.debug(pic);
+       this.pic = null; 
+       
    }
    public String getPic() {
       return pic;
@@ -17,10 +17,12 @@ public  class TrendingListController {
       this.cycleImage();
    }
    public void cycleImage() {
-      if (this.pic == '{!$Resource.product}') {
-         pic = '{!$Resource.product0}';
+      if (this.pic == null) {
+         pic = 'Not null';
+         System.Debug('changing pic to 0');
       } else  {
-         pic = '{!$Resource.product}';
+         pic = null;
+          System.Debug('changing pic to');
       }
    }
    
