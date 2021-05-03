@@ -1,25 +1,44 @@
-<apex:page controller="StoreProductsController">
+<apex:page controller="StoreProductsController" sidebar="false" docType="html-5.0" showHeader="false" standardStylesheets="false" >
     <apex:stylesheet value="{!$Resource.ProductPageCSS}"/>
-    <apex:slds >
-        <apex:form >
+	<apex:slds >
+        <apex:form style="margin-left:20px;">       
+           
             <apex:pageBlock >
                 
-                <apex:pageBlockButtons >
-                    <apex:commandButton value="Previous"/>
-                    <apex:commandButton value="Next"/>
+                <apex:pageBlockButtons style="text-align:center;">
+                    <apex:commandButton id="prevBtn" value="Previous" action="{!prev}" styleClass="slds-button slds-button_brand" style="width:100px; border:none; background:#F4C558; color:#7C5B3E; margin-top: 20px;">
+                        <apex:actionSupport event="onclick" reRender="xyz"/>
+                    </apex:commandButton>
+                    <apex:commandButton id="nextBtn" value="Next" action="{!next}" disabled="" styleClass="slds-button slds-button_brand" style="width:100px; border:none; background:#F4C558; color:#7C5B3E; margin-top: 20px;">
+                        <apex:actionSupport event="onclick" reRender="xyz"/>
+                    </apex:commandButton>
                 </apex:pageBlockButtons>
                 
                 
-                <apex:dataTable rows="5" value="{!productWrapper}" var="product" styleClass="slds-grid slds-wrap slds-gutters">
+                <apex:dataTable id="xyz" rows="5" value="{!productWrapper}" var="product" styleClass="slds-grid slds-wrap slds-gutters">
                     
                     <apex:column >
                         <br/>
                         <div class="product" >
-                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <apex:image styleClass="img" value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
                             <br/>
-                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.col1}"/>
                             <br/>
-                            <apex:outputText value="description"></apex:outputText>
+                            <apex:outputLabel styleClass="description" value="description"></apex:outputLabel>
+                            <br/>
+                            <apex:commandButton value="Add to Cart"/>
+                        </div>
+                    </apex:column>
+                    
+                    
+                    <apex:column >
+                        <br/>
+                        <div class="product" >
+                            <apex:image styleClass="img" value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <br/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.col2}"/>
+                            <br/>
+                            <apex:outputLabel styleClass="description" value="description"></apex:outputLabel>
                             <br/>
                             <apex:commandButton value="Add to Cart"/>
                         </div>
@@ -27,32 +46,15 @@
                     
                     <apex:column >
                         <br/>
-                        
-                        <div class="product" >
-                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
-                            <br/>
-                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
-                            <br/>
-                            <apex:outputText value="description"></apex:outputText>
-                            <br/>
-                            <apex:commandButton value="Add to Cart"/>
-                        </div>
-                        
-                    </apex:column>
-                    
-                    <apex:column >
-                        <br/>
-                        
                         <div class="product">
-                            <apex:image value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
+                            <apex:image styleClass="img" value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
                             <br/>
-                            <apex:outputLabel styleClass="productLabel" value="{!product.name}"/>
+                            <apex:outputLabel styleClass="productLabel" value="{!product.col3}"/>
                             <br/>
-                            <apex:outputText value="description"></apex:outputText>
+                            <apex:outputLabel styleClass="description" value="description"></apex:outputLabel>
                             <br/>
                             <apex:commandButton value="Add to Cart"/>
                         </div>
-                        
                     </apex:column>
                     
                     
@@ -61,5 +63,5 @@
                 
             </apex:pageBlock>
         </apex:form>
-    </apex:slds>
+	</apex:slds>
 </apex:page>

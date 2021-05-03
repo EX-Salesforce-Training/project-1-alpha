@@ -12,7 +12,6 @@
     <label>Partymaking</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
-
     <tabs>Rental__c</tabs>
     <tabs>Store_Product__c</tabs>
     <tabs>Salesperson__c</tabs>
@@ -22,5 +21,4 @@
     <tabs>Rental_Period__c</tabs>
     <tabs>Delivery__c</tabs>
     <uiType>Lightning</uiType>
-
 </CustomApplication>
