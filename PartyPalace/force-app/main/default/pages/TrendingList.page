@@ -43,7 +43,7 @@
                                             value="{!$Resource.product}"></apex:image>
                                 <br/>
                                 <apex:outputLabel styleClass="productLabel" 
-                                                  value="Name: {!product.row0Column0}"/>
+                                                  value="{!product.row0Column0}"/>
                                 <br/>
                                 <apex:outputLabel styleClass="description"  
                                                   value="Rating: {!product.row0Column0Rating}"></apex:outputLabel>
