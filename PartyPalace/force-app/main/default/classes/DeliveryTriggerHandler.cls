@@ -44,8 +44,6 @@ public class DeliveryTriggerHandler {
             if (d.Delivered__c){
                 For(Rental_Line__c rentalLine : Rentals){
                     For(Installer__c ins: installers){
-                        system.debug(rentalLine.Rental__c);
-                        system.debug(ins.ID);
                         Rental_Period__c rentalPeriod = new Rental_Period__c(Rental__c = rentalLine.Rental__c, Installer__c = ins.Id);
                         rentalPeriod.Start_Date__c = d.Delivery_Date__c;
                         if(d.Delivery_Date__c == null){
