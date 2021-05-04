@@ -191,11 +191,4 @@ public with sharing class StoreProductsController {
         insert productLine;
         
     }
-    
-    // setCurrentPage
-    public void setCurrentPage(Integer page){
-        currentPage = page;
-    }
-    
-
 }

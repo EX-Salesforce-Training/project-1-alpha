@@ -58,7 +58,7 @@
                     
                     <apex:column >
                         <br/>
-                        <div class="product" id="pro" style="display:{!IF(product.name3 != null, 'block','none')}">
+                        <div class="product" style="display:{!IF(product.name3 != null, 'block','none')}">
                             <apex:image styleClass="img" value="https://i.gyazo.com/0d1ff9dc4efb373df35dbc09dfacb259.png"></apex:image>
                             <br/>
                             <apex:outputLabel id="productLabel" styleClass="productLabel" value="{!product.name3}" />
