@@ -1,14 +1,21 @@
 public class TransactionPageController {
     public Transaction__c trans{get;set;}
-    public Contact con{get;set;}
     public List<Product_Line__c> productLines{get;set;}
     Id currentUser = UserInfo.getUserId();
+    CurrentTransaction currentTrans = new CurrentTransaction();
+    public List<String> TotalCost {get;set;}
     
     public TransactionPageController(){
-        User you = [SELECT Name, ContactID FROM User where id =: currentUser];
-        trans = [SELECT Name, Contact__c, Status__c, Store_Location__c, Salesperson__c FROM Transaction__c WHERE Status__c =: 'Active' AND Contact__c =: you.ContactId];
-        productLines = [SELECT Name, Transaction__c, Product__c, Quantity__c FROM Product_Line__c WHERE Transaction__c =: trans.id];
+        trans = currentTrans.Trans;
+        productLines = [SELECT Name, Transaction__c, Product__c, Quantity__c, Total_Cost__c FROM Product_Line__c WHERE Transaction__c =: trans.id];
+        TotalCost = new List<String>();
+        for (Product_Line__c pl : productLines){
+      		String tc = String.valueOf(pl.Total_Cost__c);
+            TotalCost.add(tc);
+        }
+
     }
+    
 
     public PageReference save(){
         trans.Status__c = 'Closed';
@@ -16,7 +23,13 @@ public class TransactionPageController {
         update trans;
         insert newTransaction;
         trans = newTransaction;
+        currentTrans.setCurrentTransaction(newTransaction);
         productLines = [SELECT Name, Transaction__c, Product__c, Quantity__c FROM Product_Line__c WHERE Transaction__c =: newTransaction.id];
         return Page.TransactionPage;
     }
-}
+    public PageReference updatePage(){
+        update productLines;
+        return Page.TransactionPage;
+    }
+
+    }

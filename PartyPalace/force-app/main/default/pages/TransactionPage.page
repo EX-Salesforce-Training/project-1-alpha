@@ -1,15 +1,31 @@
 <apex:page controller="TransactionPageController">
     <apex:form >
-        <div class ="cart">
+        
         <apex:pageBlock title="Cart" id="Cart">
-            <apex:pageBlockTable value="{!productLines}" var="ProductLine">
+            <apex:panelGrid columns="2">
+            <apex:pageBlockTable value="{!productLines}" var="ProductLine" id="tableA">
                 <apex:column value="{!ProductLine.Product__c}"/>
-                <apex:column value="{!ProductLine.Quantity__c}"/>
-            </apex:pageBlockTable>
-        </apex:pageBlock>
-        <apex:commandButton action="{!save}" value = "Submit" style="width:100px; border:none; background:#F4C558; color:#7C5B3E; margin-top: 20px;">
-            <apex:actionSupport event="onclick" reRender="Cart"/>
-        </apex:commandButton>
-    </div>
-    </apex:form>
-</apex:page>
+                <apex:column headerValue="Quantity">
+					<apex:inputText value="{!ProductLine.Quantity__c}"/>
+                </apex:column>
+              </apex:pageBlockTable>
+              <apex:pageBlockTable value="{!TotalCost}" var="tc" id="tableB" cellpadding="0">
+                  	<apex:column headervalue="Total Cost" > 
+                        <apex:outputText value="{!tc}">
+                        </apex:outputText>
+                  </apex:column>
+              </apex:pageBlockTable>
+              </apex:panelGrid>
+                
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Submit" style="width:100px; border:none; background:#F4C558; color:#7C5B3E;">
+                        <apex:actionSupport event="onclick" reRender="Cart"/>
+                    </apex:commandButton>
+                    <apex:commandButton action="{!updatePage}" value="Update" style="width:100px; border:none; background:#F4C558; color:#7C5B3E;">
+                        <apex:actionSupport event="onclick" reRender="Cart"/>
+                    </apex:commandButton>
+                    
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:form>
+    </apex:page>
