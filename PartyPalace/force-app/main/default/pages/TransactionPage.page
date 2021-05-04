@@ -1,13 +1,15 @@
 <apex:page controller="TransactionPageController">
     <apex:form >
+        <div class ="cart">
         <apex:pageBlock title="Cart" id="Cart">
             <apex:pageBlockTable value="{!productLines}" var="ProductLine">
                 <apex:column value="{!ProductLine.Product__c}"/>
                 <apex:column value="{!ProductLine.Quantity__c}"/>
             </apex:pageBlockTable>
         </apex:pageBlock>
-        <apex:commandButton action="{!save}">
+        <apex:commandButton action="{!save}" value = "Submit" style="width:100px; border:none; background:#F4C558; color:#7C5B3E; margin-top: 20px;">
             <apex:actionSupport event="onclick" reRender="Cart"/>
         </apex:commandButton>
+    </div>
     </apex:form>
 </apex:page>
