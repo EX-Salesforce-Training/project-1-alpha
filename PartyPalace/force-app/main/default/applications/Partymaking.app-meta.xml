@@ -20,5 +20,6 @@
     <tabs>standard-Contact</tabs>
     <tabs>Rental_Period__c</tabs>
     <tabs>Delivery__c</tabs>
+    <tabs>Product_Line__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
