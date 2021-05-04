@@ -1,20 +1,20 @@
-Name
-Birthday Cake
-Wedding Cake
-Red Balloons
-Orange Balloons
-Yellow Balloons
-Green Balloons
-Blue Balloons
-Purple Balloons
-White Balloons
-Clear Balloons
-Birthday Balloons
-Special Balloons
-Tablecloth
-Piñata
-Custom Centerpieces
-Banners
-Birthday Garland
-Fring Garland
-Graduation Backdrop
+Name,Product_Description__c,Price Per Unit
+Birthday Cake,"Cake, cake, cake, cake, cake.. and it's not even your birthday!",20
+Wedding Cake,A very yummy cake,50
+Red Balloons,A balloon that is red in color,0.99
+Orange Balloons,A balloon that is orange in color,0.99
+Yellow Balloons,A balloon that is yellow in color,0.99
+Green Balloons,A balloon that is green in color,0.99
+Blue Balloons,A balloon that is blue in color,0.99
+Purple Balloons,A balloon that is purple in color,0.99
+White Balloons,A balloon that is white in color,0.99
+Clear Balloons,A balloon that... has no color?,5.99
+Birthday Balloons,A balloon that is Birthday in color,0.5
+Special Balloons,A balloon that is special,0.99
+Tablecloth,A tablecloth for tables. Color varies by order.,4.99
+Piñata,Like viva piñata but IRL,14.98
+Custom Centerpieces,Decoratinon for the center of a table!,7.99
+Banners,A cute banner that you cannot customize.,133.37
+Birthday Garland,Not Judy Garland,12.99
+Fringe Garland,Not Judy Garland,12.98
+Graduation Backdrop,Congrats grad! .. Now what?,42

@@ -3,7 +3,11 @@
     <fullName>Status__c</fullName>
     <externalId>false</externalId>
     <label>Status</label>
+<<<<<<< HEAD
     <required>true</required>
+=======
+    <required>false</required>
+>>>>>>> addToCart
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
@@ -16,11 +20,14 @@
                 <label>Active</label>
             </value>
             <value>
+<<<<<<< HEAD
                 <fullName>Cancelled</fullName>
                 <default>false</default>
                 <label>Cancelled</label>
             </value>
             <value>
+=======
+>>>>>>> addToCart
                 <fullName>Closed</fullName>
                 <default>false</default>
                 <label>Closed</label>
