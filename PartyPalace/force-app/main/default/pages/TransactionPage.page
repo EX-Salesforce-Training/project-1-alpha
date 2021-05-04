@@ -1,0 +1,13 @@
+<apex:page controller="TransactionPageController">
+    <apex:form >
+        <apex:pageBlock title="Cart" id="Cart">
+            <apex:pageBlockTable value="{!productLines}" var="ProductLine">
+                <apex:column value="{!ProductLine.Product__c}"/>
+                <apex:column value="{!ProductLine.Quantity__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:commandButton action="{!save}">
+            <apex:actionSupport event="onclick" reRender="Cart"/>
+        </apex:commandButton>
+    </apex:form>
+</apex:page>
