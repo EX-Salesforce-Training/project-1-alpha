@@ -24,7 +24,7 @@ virtual public class ItemUiHelper{
 
     public Store_Product__c currentItem;
     public static Integer currentPage = null;
-    public static Integer totalPages;
+    public static Integer totalPages {get; set;}
     //Contstructor to hold current product item in store being worked on 
     public ItemUiHelper(){
         currentItem = new Store_Product__c();

@@ -6,37 +6,9 @@
                 execute pagination for Party Palace Store Items and for setting up interface variables.
 */
 public class TrendingListController extends ItemUiHelper {
-    private List<ItemUiHelper> productItemHelper;
+    public List<ItemUiHelper> productItemHelper;
     ItemUiHelper uiHelper = new ItemUiHelper();
-    public static SelectOption selectedOption {get; set;}
-    public String currCat {get; set;}
-    Set<SelectOption> categoryOptions = new Set<SelectOption>();
-    
-    public String GetRow0Col0() {
-        return totalProducts[currItem + 1].Product_Description__c;
-    }
-    //Method fired from event. Used to check what user selected from picklist options 
-    public PageReference CheckSelected(){
-        System.debug('checking selOption ' + currCat);
-        //Check picklist options for matching selected item
-        for(SelectOption i : categoryOptions) {
-            if(i.getLabel() == currCat) {
-                selectedOption = i;
-            }
-        }
-        if(selectedOption!=null){ return  Page.TrendingList; }
-        return Page.TrendingList;
-    }
-    //Dynamic Apex to get picklist values from Store Product Category Field
-    public Set<SelectOption> GetCategoryOptions() {
-            Schema.DescribeFieldResult fieldResult = Store_Product__c.Category__c.getDescribe();
-            List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-            //check values from picklist 
-            for (Schema.PicklistEntry f: ple) {
-                categoryOptions.add(new SelectOption(f.getLabel(), f.getValue()));
-            }
-        return categoryOptions;
-    }
+
     //Method to Generate page setup and save list of poducts currently in org. 
     public List<ItemUiHelper> GetProductItemHelper(){
         productItemHelper = new List<ItemUiHelper>();
