@@ -3,7 +3,7 @@
     <fullName>Status__c</fullName>
     <externalId>false</externalId>
     <label>Status</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
@@ -14,11 +14,6 @@
                 <fullName>Active</fullName>
                 <default>false</default>
                 <label>Active</label>
-            </value>
-            <value>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-                <label>Cancelled</label>
             </value>
             <value>
                 <fullName>Closed</fullName>

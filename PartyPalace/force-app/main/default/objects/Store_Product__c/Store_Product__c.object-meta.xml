@@ -160,6 +160,16 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Store Products</pluralLabel>
+    <profileSearchLayouts>
+        <fields>NAME</fields>
+        <fields>Rating__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>OBJECT_ID</fields>
+        <fields>Category__c</fields>
+        <fields>Product_Description__c</fields>
+        <fields>Price_Per_Unit__c</fields>
+        <profileName>System Administrator</profileName>
+    </profileSearchLayouts>
     <searchLayouts></searchLayouts>
     <sharingModel>Private</sharingModel>
     <visibility>Public</visibility>
