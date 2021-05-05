@@ -6,20 +6,20 @@
 -->
 <apex:page controller="TrendingListController" sidebar="false" docType="html-5.0" showHeader="false" standardStylesheets="false" >
     
-    <apex:stylesheet value="{!$Resource.ProductPageCSS}"/>
+    <apex:stylesheet value="{!$Resource.TrendingPageCSS}"/>
     <apex:slds >
         <apex:form style="margin-left:20px;">  
             <apex:pageBlock >
                 <apex:pageBlockButtons style="text-align:center;">
                     <apex:commandButton id="back_button" value="Previous" action="{!ShowPreviousProducts}" 
                                         styleClass="slds-button slds-button_brand" 
-                                        style="margin-top: 20px; width:150px; border:solid;  color:#7C5B3E; background:#F4C558;">
+                                        style="margin-top: 20px; width:150px; border:none; color:#7C5B3E; background:#F4C558;">
                     <apex:actionSupport event="onclick" reRender="data_table"/>
                     </apex:commandButton>
                     
                     <apex:commandButton id="next_button" value="Next" action="{!ShowNextProducts}" 
                                         disabled="" styleClass="slds-button slds-button_brand" 
-                                        style="margin-top: 20px; border:solid; background:#F4C558; width:150px; color:#7C5B3E;">
+                                        style="margin-top: 20px; border:none; background:#F4C558; width:150px; color:#7C5B3E;">
                         
                     <apex:actionSupport event="onclick" reRender="data_table"/>
                     </apex:commandButton>
@@ -52,7 +52,7 @@
                                 <apex:outputLabel styleClass="description"  
                                                   value="Rating: {!product.row0Column0Rating}"></apex:outputLabel>
                                 <br/>
-                                <apex:outputLabel styleClass="description" value="Price: {!product.row0Column0Price}"></apex:outputLabel>
+                                <apex:outputLabel styleClass="price" value="${!product.row0Column0Price}"></apex:outputLabel>
                                 <br/>
                             </div>
                         </apex:column>
@@ -67,7 +67,7 @@
                                 <br/>
                                 <apex:outputLabel styleClass="description" value="Rating: {!product.row0Column1Rating}"></apex:outputLabel>
                                 <br/>
-                                <apex:outputLabel styleClass="description" value="Price: {!product.row0Column1Price}"></apex:outputLabel>
+                                <apex:outputLabel styleClass="price" value="${!product.row0Column1Price}"></apex:outputLabel>
                                 <br/>
                             </div>
                         </apex:column>
@@ -81,7 +81,7 @@
                                 <br/>
                                 <apex:outputLabel styleClass="description" value="Rating: {!product.row0Column2Rating}"></apex:outputLabel>
                                 <br/>
-                                <apex:outputLabel styleClass="description" value="Price: {!product.row0Column2Price}"></apex:outputLabel>
+                                <apex:outputLabel styleClass="price" value="${!product.row0Column2Price}"></apex:outputLabel>
                                 <br/>
                             </div>
                         </apex:column>

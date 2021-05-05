@@ -9,7 +9,7 @@
 //
 ///////////////////////////////////////////////////////////////
 
-public with sharing class StoreProductsController {
+public class StoreProductsController {
     List<ProductsWrapper> productWrapper;
     static Integer currentPage; 
     static Integer totalPages;
@@ -184,8 +184,8 @@ public with sharing class StoreProductsController {
     public void AddToCart(){
 
         User currentUser = [Select ContactID FROM User WHERE Id =: userId];
-        //Transaction__c trans = [SELECT Name, Contact__c FROM Transaction__c WHERE Status__c='Active' AND Contact__c =: currentUser.ContactId];
-        Transaction__c trans = [SELECT Id FROM Transaction__c WHERE Status__c='Active'];
+        Transaction__c trans = [SELECT Name, Contact__c FROM Transaction__c WHERE Status__c='Active' AND Contact__c =: currentUser.ContactId];
+        //Transaction__c trans = [SELECT Id FROM Transaction__c WHERE Status__c='Active'];
         Store_Product__c product = [SELECT Id FROM Store_Product__c WHERE Name =: clickedItem];
         Product_Line__c productLine = new Product_Line__c(Product__c=product.id, Transaction__c=trans.id, Quantity__c=1);
         insert productLine;

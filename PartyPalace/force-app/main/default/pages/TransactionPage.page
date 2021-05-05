@@ -18,12 +18,12 @@
                   </apex:column>
               </apex:pageBlockTable>
               </apex:panelGrid>
-            <br>
-        	</br>
+          
+            <br/>
             <apex:outputText >Grand Total: ${!GrandTotal}</apex:outputText>
         	
                 
-                <apex:pageBlockButtons>
+                <apex:pageBlockButtons >
                     <apex:commandButton action="{!save}" value="Submit" style="width:100px; border:none; background:#F4C558; color:#7C5B3E;">
                         <apex:actionSupport event="onclick" reRender="Cart"/>
                     </apex:commandButton>

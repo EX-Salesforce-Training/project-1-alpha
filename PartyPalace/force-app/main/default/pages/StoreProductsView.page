@@ -31,7 +31,7 @@
                             <apex:outputLabel styleClass="price" value="${!product.price1}"></apex:outputLabel>
                             <br/>
                             <apex:commandLink value="Add to Cart" action="{!AddToCart}" styleClass="slds-button slds-button_brand" style="background:white; border:none;color: #D17C4E;">
-                                <apex:param name="param1" assignTo="{!param1}" value="{!product.name1}"/>
+                                <apex:param name="clickedItem" assignTo="{!clickedItem}" value="{!product.name1}"/>
                             </apex:commandLink>
                         </div>
                     </apex:column>
@@ -51,7 +51,7 @@
                             <apex:outputLabel styleClass="price" value="${!product.price2}" style=""></apex:outputLabel>
                             <br/>
                             <apex:commandLink value="Add to Cart" action="{!AddToCart}" styleClass="slds-button slds-button_brand" style="background:white; border:none;color: #D17C4E;">
-                                <apex:param name="param1" assignTo="{!param1}" value="{!product.name2}"/>
+                                <apex:param name="clickedItem" assignTo="{!clickedItem}" value="{!product.name2}"/>
                             </apex:commandLink>
                         </div>
                     </apex:column>

@@ -44,13 +44,13 @@ public class StoreProductLineTriggerHandler {
         List<Store_Inventory__c> oldInvs = findInventory(oldProducts);
         List<Store_Inventory__c> newInvs = findInventory(newProducts);
         //get the difference in inventory from old to new
-        for(Integer i = 0; i < newProducts.size(); i++){
-        newInvs[i].Number_in_Stock__c = newInvs[i].Number_in_Stock__c - (newProducts[i].Quantity__c - oldProducts[i].Quantity__c);
+        //for(Integer i = 0; i < newProducts.size(); i++){
+        //newInvs[i].Number_in_Stock__c = newInvs[i].Number_in_Stock__c - (newProducts[i].Quantity__c - oldProducts[i].Quantity__c);
         //Ask if we are out of stock
-        if (newInvs[i].Number_in_Stock__c < 0){
-            newProducts[i].Quantity__c.addError('Not enough in Stock');
-        }
-        }
+        //if (newInvs[i].Number_in_Stock__c < 0){
+        //    newProducts[i].Quantity__c.addError('Not enough in Stock');
+        //}
+        //}
         update newInvs;
         updateTotalCost(newProducts);
         

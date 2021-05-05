@@ -31,11 +31,17 @@
     </decisions>
     <description>When a new contact is created, a new transaction is created</description>
     <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>ISNEW()</stringValue>
+            </value>
+        </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>true</expression>
+        <expression>ISNEW()</expression>
     </formulas>
-    <interviewLabel>Transaction_Creation-1_InterviewLabel</interviewLabel>
+    <interviewLabel>Transaction_Creation-3_InterviewLabel</interviewLabel>
     <label>Transaction Creation</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -107,6 +113,42 @@
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Salesperson</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Salesperson__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Salesperson__c</field>
+            <value>
+                <stringValue>a085e000000gnEcAAI</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
                     <stringValue>Picklist</stringValue>
                 </value>
             </processMetadataValues>
@@ -131,6 +173,42 @@
             <field>Status__c</field>
             <value>
                 <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Store Location</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Store_Location__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Store_Location__c</field>
+            <value>
+                <stringValue>a0A5e000004TBW6EAO</stringValue>
             </value>
         </inputAssignments>
         <object>Transaction__c</object>
