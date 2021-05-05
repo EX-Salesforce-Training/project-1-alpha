@@ -9,7 +9,6 @@ btn{
 }
 
 btn:hover{
-<<<<<<< HEAD
     border: none; 
     background: #e29255;
     color: #7C5B3E;
@@ -17,22 +16,12 @@ btn:hover{
 
 .description{
     color: #7C5B3E;
-=======
-    border:none; 
-    background:#e29255;
-    color:#7C5B3E;
-}
-
-.description{
-    color:#7C5B3E;
->>>>>>> 1529b835530a86c7bafe7507596d1a25d41a309d
 }
 
 .img{
     border-radius: 5px;
     border: 2px solid #D17C4E;
 	height: 100px;
-<<<<<<< HEAD
     margin-bottom: 15px;
     width: 100px;
 }
@@ -51,42 +40,18 @@ btn:hover{
     padding-top: 20px; 
     padding-right: 25px;
     padding-left: 25px;
-=======
-    margin-bottom: 10px;
-    width: 100px;
-}
-
-.product{
-    background: #F4C558;
-    border-radius: 5px;
-    height: 275px;
-    margin-top: 5px; 
-    margin-right: 15px; 
-    max-width: 250px;
-    padding-top: 50px; 
->>>>>>> 1529b835530a86c7bafe7507596d1a25d41a309d
     text-align: center;
     transition: .3s;
     width: 23vh;
 }
 
 .product:hover{
-<<<<<<< HEAD
     background: #E69A3A;
     border-radius: 5px;
     height: 285px; 
     margin-right: 15px; 
     max-width: 250px;
     padding-top: 25px; 
-=======
-    background: #D17C4E;
-    border-radius: 5px;
-    height: 275px;
-    margin-top: 5px; 
-    margin-right: 15px; 
-    max-width: 250px;
-    padding-top: 50px; 
->>>>>>> 1529b835530a86c7bafe7507596d1a25d41a309d
     text-align: center;	
     transition: .3s;
     width: 23vh;
@@ -94,11 +59,8 @@ btn:hover{
 
 .productLabel{
     color: white;
-<<<<<<< HEAD
     font-size: 1.4em; 
-=======
-    font-size: 1.5em; 
->>>>>>> 1529b835530a86c7bafe7507596d1a25d41a309d
+
     font-weight: bold;
 }
 
