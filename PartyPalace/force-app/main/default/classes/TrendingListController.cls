@@ -11,7 +11,7 @@ public class TrendingListController extends ItemUiHelper {
     public static SelectOption selectedOption {get; set;}
     public String currCat {get; set;}
     Set<SelectOption> categoryOptions = new Set<SelectOption>();
-   
+    
     public String GetRow0Col0() {
         return totalProducts[currItem + 1].Product_Description__c;
     }
@@ -35,7 +35,6 @@ public class TrendingListController extends ItemUiHelper {
             for (Schema.PicklistEntry f: ple) {
                 categoryOptions.add(new SelectOption(f.getLabel(), f.getValue()));
             }
-        
         return categoryOptions;
     }
     //Method to Generate page setup and save list of poducts currently in org. 
@@ -86,12 +85,10 @@ public class TrendingListController extends ItemUiHelper {
             row0Column2 = totalProducts.get(1).Name;
             currItem = 1;
         }
-       
+        //save data for items in grid gallery
          uiHelper.SaveItemData(row0Column0, row0Column0Price, row0Column0Rating,
                            row0Column1, row0Column1Price, row0Column1Rating,
                            row0Column2, row0Column2Price, row0Column2Rating);
          productItemHelper.add(uiHelper);
-    }
-    
-    
+    }    
 }
