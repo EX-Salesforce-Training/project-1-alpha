@@ -1,3 +1,12 @@
+<!-- ////////////////////////////////////////
+//
+//	Name: RecommendationsView
+//	Author: Abdul-Shahid Wali
+//	Created: 4/30/21
+//	Updated: 5/04/21
+//	Description: Visualforce page that filters the products in the database according to their category
+//	and displays them in a list view
+//////////////////////////////////////// -->
 <apex:page controller="RecommendationsController" sidebar="false" docType="html-5.0" showHeader="false" standardStylesheets="false">
     <apex:stylesheet value="{!$Resource.RecommendationsCSS}"/>
     <apex:slds >
