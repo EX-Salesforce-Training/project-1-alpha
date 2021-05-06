@@ -18,9 +18,9 @@ Party Palace is a party supply and rental business that lets customers order, pu
 **Required Must Have Stories**
 
 - [ ] Customer should be able to:
-  - [ ] Access Experience Cloud Site and login/register
+  - [x] Access Experience Cloud Site and login/register
   - [ ] View past transactions
-  - [ ] Create new orders
+  - [x] Create new orders
 
 - [ ] Sales personnel should be able to:
   - [ ] View their sales metrics
