@@ -31,6 +31,7 @@ Party Palace is a party supply and rental business that lets customers order, pu
 ### 2. Screen Archetypes
 
 * Landing Page
+* Trending Page
 * Order Page
 * Sales Metrics
 * Searchable Products and Services
