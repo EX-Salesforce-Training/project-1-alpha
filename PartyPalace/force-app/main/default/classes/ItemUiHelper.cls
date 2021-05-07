@@ -7,7 +7,7 @@
 */
 virtual public class ItemUiHelper{
     public Integer currItem = 0;
-    public List<Store_Product__c> totalProducts {get; set;}
+    public List<Store_Product__c> totalProducts = null;
     public Integer amountOfItems = 0;
     //row0colums' are used to save data related to current 3 items in VF view
     public String row0Column0{get;set;}
@@ -28,7 +28,13 @@ virtual public class ItemUiHelper{
     //Contstructor to hold current product item in store being worked on 
     public ItemUiHelper(){
         currentItem = new Store_Product__c();
-    }   
+    }  
+    public List<Store_Product__c> GetTotalProducts() {
+        return totalProducts;
+    } 
+    public Integer GetCurrentPage() {
+        return currentPage;
+    }
     //Function to assign pointer to next item in list
     //if end of list is reached pointer is set to beginning of list
     public PageReference ShowNextProducts(){

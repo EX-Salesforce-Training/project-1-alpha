@@ -5,41 +5,30 @@ public with sharing class TrendingListControllerTest {
 
      @isTest public static void GetProductItemHelper() {
          TrendingListController testingTrendingListController = new TrendingListController();
-         ItemUiHelper testUIHelper = new ItemUiHelper();
-         if(true) {
-             System.assertNotEquals(testUIHelper, null);
-         }
-          allItems = new List<Store_Product__c>();
+        
+         allItems = new List<Store_Product__c>();
          for(Integer i = 0; i <= 25; i++) {
             Store_Product__c temp = GetNewStoreProduct();
             allItems.add(temp);
         }
-        for(Integer i = 0; i <= 25; i++) {
-            System.debug('current' + i);
-            currInt = i;
-            if(i /2 == 0) {
-               currInt = i + 2;
-            }
-        }
         test.starttest();
         insert allItems;
         test.stoptest();
-        System.assertNotEquals(testingTrendingListController, null);
-     
-        List<Store_Product__c> totalProducts = [SELECT Name,Id, Price_Per_Unit__c, Rating__c
-                               FROM Store_Product__c
-                               ORDER BY Rating__c DESC];
-          System.assertNotEquals(7, 0);
-         System.assertEquals(totalProducts.size(), 26);
-        
-         testingTrendingListController.SaveItemData('hello', 1, 2, 
-                                                   'hello0', 2, 5, 
-                                                    'hello1', 3, 4);
-        System.assertEquals(testingTrendingListController.row0Column0, 'hello');
-        System.assertEquals(testingTrendingListController.row0Column0Price, 1);
-        System.assertEquals(testingTrendingListController.row0Column0Rating, 2);
-        testingTrendingListController.SetItemsInGallery();
-        System.assertNotEquals(testingTrendingListController.row0Column0, 'test');
+        testingTrendingListController.GetProductItemHelper();
+        System.assertEquals(testingTrendingListController.totalProducts.size(), 26);
+         System.assertEquals(testingTrendingListController.GetTotalProducts().size(), 26);
+         System.assertEquals(testingTrendingListController.GetCurrentPage(), 0);
+        System.assertEquals(allItems.get(0).Price_Per_Unit__c,
+                            testingTrendingListController.row0column0Price);
+        System.assertNotEquals(testingTrendingListController.row0Column0Rating,
+                            0);
+        testingTrendingListController.ShowNextProducts();
+        System.assertEquals(testingTrendingListController.GetCurrentPage(), 1);
+        testingTrendingListController.ShowPreviousProducts();
+        System.assertEquals(testingTrendingListController.GetCurrentPage(), 0);
+        System.assertEquals(1, 1);
+       
+       
         
     }
 
@@ -120,26 +109,11 @@ public with sharing class TrendingListControllerTest {
         Store_Product__c tempItem = new Store_Product__c();
         tempItem.Name = 'temp'  + Math.Random()* 10;
         tempItem.Rating__c =  Math.Random();
+        tempItem.Price_Per_Unit__c = 4;
         tempItem.Category__c = 'Ballons';
         return tempItem;
     }
    
-   @isTest public static void TrendingListController() {
-
-       TrendingListController test = new TrendingListController();
-        test.SaveItemData('mother', 1, 2, 
-                                                   'thon', 2, 5, 
-                                                    'fotehr', 3, 4);
-                                                    System.assertEquals(test.row0Column0, 'mother');
-       allItems = new List<Store_Product__c>();
-        
-         for(Integer i = 0; i <= 25; i++) {
-            Store_Product__c temp = GetNewStoreProduct();
-            allItems.add(temp);
-        }
-        System.assertEquals(test.row0Column0Price, 1);
-        System.assertEquals(test.row0Column0Rating, 2);
-
-   }
+   
      
 }
